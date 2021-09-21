@@ -70,6 +70,11 @@ client.on("messageCreate", (message) => {
     console.log("author: " + message.author);
     console.log(args);
 
+    //keep server running
+    if (message.content === 'ping') {
+        message.reply('pong!');
+    }
+
     // commands
     if (!client.commands.has(cmd)) return;
     // executing commands dynamically
