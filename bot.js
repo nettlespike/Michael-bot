@@ -22,6 +22,7 @@ for (const file of commandFiles) {
   const command = require(`./cmds/${file}`);
   client.commands.set(command.name, command);
 }
+
 // yoinking from listeners
 client.listener = new Collection();
 const listenerFiles = fs
@@ -85,6 +86,8 @@ client.on("messageCreate", (message) => {
       message.reply({ content: "The command doesn't work :(", ephemeral: true });
     }
   }
+
+  
   // caveman iq solution
   else if (true) {
     for (let i = 0; i < listenFiles.length; i++) {
@@ -92,5 +95,6 @@ client.on("messageCreate", (message) => {
       client.listener.get(listenFiles[i]).execute(message, client);
     }
   }
+  
 });
 
