@@ -4,7 +4,7 @@ module.exports = {
     execute(message) {
       if (
         message.content.toLowerCase().includes("hard")||
-        message.content.toLowerCase().includes("ridgid")||
+        message.content.toLowerCase().includes("rigid")||
         message.content.toLowerCase().includes("big")||
         message.content.toLowerCase().includes("ahh")||
         message.content.toLowerCase().includes("came")||
