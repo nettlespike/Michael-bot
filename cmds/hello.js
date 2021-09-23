@@ -2,7 +2,7 @@ module.exports = {
     name: "hello",
     description: "meet michael",
     execute(message) {
-        message.channel.send("HELLO THERE I AM NOT KENOBI YOU ARE. DO NOT BE GENERAL GREVIOUS.");
+        message.channel.send("HELLO THERE I AM NOT KENOBI YOU ARE. YOU ARE JEDI.");
     },
   };
   
