@@ -1,4 +1,4 @@
-const { token } = require("./config.json");
+//const { token } = require("./config.json");
 // creating client object
 const { Client, Collection, Intents } = require("discord.js");
 const client = new Client({
