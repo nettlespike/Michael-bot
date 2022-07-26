@@ -1,7 +1,7 @@
 //const { token } = require("./config.json");
 // creating client object
-
-const token = "ODg5OTc3MzQ2NTgzNTYwMzAz.YUpF_g.HNn3sjU0kZdTX4_2TBaMh6al0aI";
+require('dotenv').config();
+const token = process.env.DISCORD_TOKEN;
 const { Client, Collection, Intents } = require("discord.js");
 const client = new Client({
   intents: [
