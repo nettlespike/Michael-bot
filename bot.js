@@ -1,5 +1,6 @@
 //const { token } = require("./config.json");
 // creating client object
+const token = process.env.DISCORD_TOKEN;
 const { Client, Collection, Intents } = require("discord.js");
 const client = new Client({
   intents: [
@@ -45,6 +46,7 @@ client.once("ready", () => {
   console.log("Ready!");
   client.user.setActivity("That's what she said. !help");
 });
+
 
 // login to discord
 client.login(token);
