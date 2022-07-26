@@ -13,7 +13,7 @@ const client = new Client({
 
 const fs = require("fs"); // to go into different files
 
-const PREFIX = process.env.PREFIX;
+const PREFIX = "!";
 
 // yoinking from commands
 client.commands = new Collection();
