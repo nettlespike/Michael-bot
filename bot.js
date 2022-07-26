@@ -1,7 +1,7 @@
 //const { token } = require("./config.json");
 // creating client object
 require('dotenv').config();
-const token = process.env.DISCORD_TOKEN;
+const token = process.env.TOKEN;
 const { Client, Collection, Intents } = require("discord.js");
 const client = new Client({
   intents: [
@@ -13,7 +13,7 @@ const client = new Client({
 
 const fs = require("fs"); // to go into different files
 
-const PREFIX = "!";
+const PREFIX = process.env.PREFIX;
 
 // yoinking from commands
 client.commands = new Collection();
