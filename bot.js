@@ -2,14 +2,19 @@
 // creating client object
 require('dotenv').config();
 const token = process.env.TOKEN;
-const { Client, Collection, Intents } = require("discord.js");
+const MYSQL = process.env.MYSQL;
+const { Client, Collection, Intents} = require("discord.js");
 const client = new Client({
   intents: [
     Intents.FLAGS.GUILDS,
     Intents.FLAGS.GUILD_MESSAGES,
     Intents.FLAGS.GUILD_VOICE_STATES,
+    
   ],
 });
+const Keyv = require('keyv');
+const quotes  = new Keyv(MYSQL); 
+keyv.on('error', err => console.error('Keyv connection error:', err));
 
 const fs = require("fs"); // to go into different files
 
